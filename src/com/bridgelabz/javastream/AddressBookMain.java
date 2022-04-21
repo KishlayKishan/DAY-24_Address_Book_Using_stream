@@ -16,6 +16,7 @@ public class AddressBookMain {
 		System.out.println("The Contact is : \n" + newContact);
 
 		// To add new contact
+
 		AddressBook addressBook = new AddressBook();
 		addressBook.operation();
 

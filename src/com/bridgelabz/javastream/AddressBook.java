@@ -13,6 +13,8 @@ public class AddressBook {
 		do {
 			System.out.println("Enter the number according to to requirment");
 			System.out.println("Enter 1 to Add");
+			System.out.println("Enter 2 to Edit");
+			System.out.println("Enter 3 to Delete");
 			switch (scan.nextInt()) {
 			case 1:
 				add();
@@ -55,7 +57,7 @@ public class AddressBook {
 		String email = scan.next();
 		contacts.setEmail(email);
 		list.add(contacts);
-		print1();
+		print();
 
 	}
 
@@ -100,13 +102,6 @@ public class AddressBook {
 					contacts.setEmail(scan.next());
 				}
 			}
-		}
-	}
-
-	public void print1() {
-		Iterator<Contacts> it = list.iterator();
-		while (it.hasNext()) {
-			System.out.println(it.next());
 		}
 	}
 
