@@ -55,8 +55,59 @@ public class AddressBook {
 		String email = scan.next();
 		contacts.setEmail(email);
 		list.add(contacts);
-		print();
+		print1();
 
+	}
+
+	public void edit() {
+		System.out.println("Enter your First name:");
+		String firstName = scan.next();
+
+		Iterator<Contacts> iterator = list.listIterator();
+
+		while (iterator.hasNext()) {
+			Contacts contacts = iterator.next();
+
+			if (firstName.equals(contacts.getFirstName())) {
+				System.out.println("Choose field you want to add:");
+				System.out.println("1.Last Name\t2.Address\t3.City\t4.State\t5. Zip\t6.Phone Number\t7.Email");
+				switch (scan.nextInt()) {
+				case 1:
+					System.out.println("Re-Correct your Last Name");
+					contacts.setLastName(scan.next());
+					break;
+				case 2:
+					System.out.println("Re-Correct your Address");
+					contacts.setAddress(scan.next());
+					break;
+				case 3:
+					System.out.println("Re-Correct your City");
+					contacts.setCity(scan.next());
+					break;
+				case 4:
+					System.out.println("Re-Correct your State");
+					contacts.setState(scan.next());
+					break;
+				case 5:
+					System.out.println("Re-Correct your Zip");
+					contacts.setZip((int) scan.nextLong());
+					break;
+				case 6:
+					System.out.println("Re-Correct your Phone Number");
+					contacts.setPhoneNumber(scan.nextLong());
+				case 7:
+					System.out.println("Re-Correct your Email");
+					contacts.setEmail(scan.next());
+				}
+			}
+		}
+	}
+
+	public void print1() {
+		Iterator<Contacts> it = list.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
 	}
 
 	public void print() {
