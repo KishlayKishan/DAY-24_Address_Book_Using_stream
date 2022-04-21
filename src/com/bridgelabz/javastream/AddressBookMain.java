@@ -15,5 +15,9 @@ public class AddressBookMain {
 		newContact.setPhoneNumber(1234567890);
 		System.out.println("The Contact is : \n" + newContact);
 
+		// To add new contact
+		AddressBook addressBook = new AddressBook();
+		addressBook.operation();
+
 	}
 }
